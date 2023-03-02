@@ -1,11 +1,11 @@
-About dvc-gs
-============
+About dvc-gs-feedstock
+======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/dvc-gs-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/iterative/dvc-gs
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/dvc-gs-feedstock/blob/main/LICENSE.txt)
 
 Summary: Google Storage plugin for DVC
 
