@@ -6,21 +6,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: e5430a297fb8182366f7c4bc910b1ab104d8e5cc22f611a19bce05165dffecd4
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
     - setuptools_scm >=6.3.1
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - dvc
     - gcsfs >=2022.11.0
 
@@ -30,6 +30,7 @@ test:
   requires:
     - git
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
     - dvc version
